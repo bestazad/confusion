@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core'; 
 import { Dish } from '../shared/dish'; 
 import { DishService } from '../services/dish.service'; 
-import { Observable } from 'rxjs'; 
+import { Observable, throwError } from 'rxjs'; 
 import {map} from 'rxjs/operators';
 import { CouchbaseService } from '../services/couchbase.service';
 import { LocalNotifications } from 'nativescript-local-notifications';
@@ -61,7 +61,7 @@ export class FavoriteService {
         }
         else {
           console.log('Deleting non-existant favorite', id);
-          return Observable.throw('Deleting non-existant favorite');
+          return throwError('Deleting non-existant favorite');
         }
     }
 }

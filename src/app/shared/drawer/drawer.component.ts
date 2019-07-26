@@ -1,6 +1,7 @@
 import {Component} from "@angular/core";
 import { TNSFontIconService } from 'nativescript-ngx-fonticon';
-import { getString, setString } from "app-settings";
+import { getString, setString } from "tns-core-modules/application-settings";
+//const { getString, setString } = require( 'app-settings');
 
 
 @Component({ 

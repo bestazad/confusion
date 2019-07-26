@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Page } from 'tns-core-modules/ui/page';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { getString, setString } from 'app-settings';
+import { getString, setString } from 'tns-core-modules/application-settings';
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as camera from 'nativescript-camera';
 import { Image } from 'tns-core-modules/ui/image';
