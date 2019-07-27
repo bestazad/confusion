@@ -6,6 +6,7 @@ import { NativeScriptUISideDrawerModule } from "nativescript-ui-sidedrawer/angul
 import { TNSFontIconModule } from 'nativescript-ngx-fonticon';
 import { NativeScriptUIListViewModule } from "nativescript-ui-listview/angular";
 import { CouchbaseService } from './services/couchbase.service';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from "./app.component";
 
@@ -51,7 +52,9 @@ import { PlatformService } from './services/platform.service';
         }),
         NativeScriptUIListViewModule,
         NativeScriptFormsModule, 
-        ReactiveFormsModule        
+        ReactiveFormsModule,
+        HttpClientModule,
+
     ],
     declarations: [
         AppComponent,
@@ -89,3 +92,5 @@ import { PlatformService } from './services/platform.service';
 Pass your application module to the bootstrapModule function located in main.ts to start your app
 */
 export class AppModule { }
+
+

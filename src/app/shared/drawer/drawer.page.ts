@@ -2,7 +2,8 @@ import {ViewChild, ChangeDetectorRef, AfterViewInit} from "@angular/core";
 import {RadSideDrawerComponent, SideDrawerType} from "nativescript-ui-sidedrawer/angular";
 
 export class DrawerPage implements AfterViewInit {
-    @ViewChild(RadSideDrawerComponent , {static: false}) protected drawerComponent: RadSideDrawerComponent; 
+    @ViewChild(RadSideDrawerComponent , {static: false}) 
+    protected drawerComponent: RadSideDrawerComponent; 
     protected drawer: SideDrawerType;
 
     constructor(private _changeDetectorRef: ChangeDetectorRef) { }

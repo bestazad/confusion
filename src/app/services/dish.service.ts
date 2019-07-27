@@ -14,19 +14,19 @@ import {map, delay, catchError} from 'rxjs/operators';
     
     getDishes(): Observable<Dish[]> { 
         return this.http.get(baseURL + 'dishes')
-        .pipe(map(res => { return this.processHTTPMsgService.extractData (res); }) 
-        ,catchError(error => { return this.processHTTPMsgService .handleError(error); })); 
+        .pipe(map(res => { return this.processHTTPMsgService.extractData(res); }) 
+        ,catchError(error => { return this.processHTTPMsgService.handleError(error); })); 
     }
 
     getDish(id: number): Observable<Dish> { 
         return this.http.get(baseURL + 'dishes/'+ id) 
-        .pipe(map(res => { return this.processHTTPMsgService.extractData (res); }) 
-        ,catchError(error => { return this.processHTTPMsgService .handleError(error); }));
+        .pipe(map(res => { return this.processHTTPMsgService.extractData(res); }) 
+        ,catchError(error => { return this.processHTTPMsgService.handleError(error); }));
     }
 
     getFeaturedDish(): Observable<Dish> { 
         return this.http.get(baseURL + 'dishes?featured=true') 
-        .pipe(map(res => { return this.processHTTPMsgService.extractData (res)[0]; }) 
-        ,catchError(error => { return this.processHTTPMsgService .handleError(error); })); 
+        .pipe(map(res => { return this.processHTTPMsgService.extractData(res)[0]; }) 
+        ,catchError(error => { return this.processHTTPMsgService.handleError(error); })); 
     }
 }

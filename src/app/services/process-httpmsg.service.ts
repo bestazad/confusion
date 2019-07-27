@@ -7,7 +7,7 @@ import { throwError } from 'rxjs';
 
     constructor() { }
     
-    public extractData(res: HttpResponse<any>) { 
+    public extractData(res: HttpResponse<any> | any) { 
         let body = res//.json(); 
         return body || { }; 
     }
